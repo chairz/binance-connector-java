@@ -1,7 +1,7 @@
 name: Publish package to the Maven Central Repository and GitHub Packages
 on:
-  pull_request:
-    branches: [ master, rc-** ]
+  push:
+    branches: [ master ]
 jobs:
   publish:
     runs-on: ubuntu-latest
