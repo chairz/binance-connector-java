@@ -16,12 +16,12 @@ jobs:
           java-version: '11'
           distribution: 'adopt'
       - name: Release Maven package
-          uses: samuelmeuli/action-maven-publish@v1
-          with:
-            gpg_private_key: ${{ secrets.OSSRH_GPG_SECRET_KEY }}
-            gpg_passphrase: ${{ secrets.OSSRH_GPG_SECRET_KEY_PASSWORD }}
-            nexus_username: ${{ secrets.OSSRH_USERNAME }}
-            nexus_password: ${{ secrets.OSSRH_TOKEN }}
+        uses: samuelmeuli/action-maven-publish@v1
+        with:
+          gpg_private_key: ${{ secrets.OSSRH_GPG_SECRET_KEY }}
+          gpg_passphrase: ${{ secrets.OSSRH_GPG_SECRET_KEY_PASSWORD }}
+          nexus_username: ${{ secrets.OSSRH_USERNAME }}
+          nexus_password: ${{ secrets.OSSRH_TOKEN }}
       - name: Publish to GitHub Packages
         run: mvn --batch-mode deploy
         env:
