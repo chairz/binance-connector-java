@@ -15,7 +15,11 @@ jobs:
       - name: Checkout source code
         uses: actions/checkout@v2
       - name: Print Key
-        run: env
+      - run: echo ${{ secrets.OSSRH_USERNAME }}
+      - run: ${{ secrets.OSSRH_TOKEN }}
+      - run: ${{ secrets.GPG_PASSPHRASE }}
+      - run: ${{ secrets.OSSRH_GPG_SECRET_KEY }}
+      
       - name: Set up Apache Maven Central
         uses: actions/setup-java@v2
         with: # running setup-java again overwrites the settings.xml
