@@ -20,8 +20,7 @@ jobs:
           server-password: MAVEN_PASSWORD
       - name: Install gpg secret key
         run: |
-          cat <(echo -e "${{ secrets.OSSRH_GPG_SECRET_KEY }}") | gpg --batch --import
-          gpg --list-secret-keys --keyid-format LONG
+          cat <(echo -e "${{ secrets.OSSRH_GPG_SECRET_KEY }}") | gpg --batch --import gpg --list-secret-keys --keyid-format LONG
       - name: Publish to the Maven Central Repository
         run: |
           mvn \
