@@ -14,11 +14,6 @@ jobs:
       # Checkout source code
       - name: Checkout source code
         uses: actions/checkout@v2
-      - id: install-secret-key
-        name: Install gpg secret key
-        run: |
-          cat <(echo -e "${{ secrets.OSSRH_GPG_SECRET_KEY }}") | gpg --batch --import
-          gpg --list-secret-keys --keyid-format LONG
       - id: publish-to-central
         name: Publish to Central Repository
         env:
