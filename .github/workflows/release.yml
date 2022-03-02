@@ -14,10 +14,13 @@ jobs:
       # Checkout source code
       - name: Checkout source code
         uses: actions/checkout@v2
-      - name: Print Key
+      - name: Print username
       - run: echo ${{ secrets.OSSRH_USERNAME }}
+      - name: Print token
       - run: ${{ secrets.OSSRH_TOKEN }}
+      - name: Print pass
       - run: ${{ secrets.GPG_PASSPHRASE }}
+      - name: Print secret
       - run: ${{ secrets.OSSRH_GPG_SECRET_KEY }}
       
       - name: Set up Apache Maven Central
