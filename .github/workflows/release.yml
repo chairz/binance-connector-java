@@ -24,8 +24,7 @@ jobs:
           server-password: MAVEN_PASSWORD
       - name: Install gpg secret key
         run: |
-          cat <(echo -e "${{ secrets.OSSRH_GPG_SECRET_KEY }}") | gpg --batch --import
-          gpg --list-secret-keys --keyid-format LONG
+          echo -n "${{ secrets.OSSRH_GPG_SECRET_KEY }}" | base64 --decode | gpg --import
       - id: publish-to-central
         name: Publish to Central Repository
         env:
