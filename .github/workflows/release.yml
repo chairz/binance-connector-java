@@ -14,10 +14,8 @@ jobs:
       # Checkout source code
       - name: Checkout source code
         uses: actions/checkout@v2
-      - name: Print Key
-        run: printf -- ${{ secrets.OSSRH_USERNAME }}
       - name: Print username
-        run: printf -- ${{ secrets.OSSRH_USERNAME }}
+        run: printf -- '${{ secrets.OSSRH_USERNAME }}'
       - name: Print token
         run: printf -- ${{ secrets.OSSRH_TOKEN }}
       - name: Print pass
