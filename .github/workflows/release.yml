@@ -17,7 +17,7 @@ jobs:
       - name: Configure GPG Key
         run: |
           mkdir -p ~/.gnupg/
-          printf -- "$MAVEN_GPG_PRIVATE_KEY" | base64 --decode > ~/.gnupg/private.key
+          printf -- "$MAVEN_GPG_PRIVATE_KEY" > ~/.gnupg/private.key
           gpg --batch --import ~/.gnupg/private.key
         env:
           MAVEN_GPG_PRIVATE_KEY: ${{ secrets.OSSRH_GPG_SECRET_KEY }}
