@@ -8,7 +8,7 @@ jobs:
 
     steps:
       # Checkout source code
-      - name: Checkout source code
+      - name: Checkout source codes
         uses: actions/checkout@v2
       - name: Set up Apache Maven Central
         uses: actions/setup-java@v2
