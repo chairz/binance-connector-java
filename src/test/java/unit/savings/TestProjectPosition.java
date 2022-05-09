@@ -40,7 +40,7 @@ public class TestProjectPosition {
 
         thrown.expect(BinanceConnectorException.class);
         SpotClientImpl client = new SpotClientImpl(apiKey, secretKey, baseUrl);
-        client.createSavings().projectPostion(parameters);
+        client.createSavings().projectPosition(parameters);
     }
 
     @Test
@@ -53,7 +53,7 @@ public class TestProjectPosition {
         mockWebServer.setDispatcher(dispatcher);
 
         SpotClientImpl client = new SpotClientImpl(apiKey, secretKey, baseUrl);
-        String result = client.createSavings().projectPostion(parameters);
+        String result = client.createSavings().projectPosition(parameters);
         assertEquals(MOCK_RESPONSE, result);
     }
 }

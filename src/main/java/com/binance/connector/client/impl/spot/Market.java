@@ -219,7 +219,7 @@ public class Market {
 
     private final String TICKER_24H = "/api/v3/ticker/24hr";
     /**
-     * 24 hour rolling window price change statistics. Careful when accessing this with no symbol.
+     * 24-hour rolling window price change statistics. Careful when accessing this with no symbol.
      * <br><br>
      * GET /api/v3/ticker/24hr
      * <br>

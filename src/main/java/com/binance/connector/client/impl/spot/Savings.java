@@ -129,7 +129,7 @@ public class Savings {
         return requestHandler.sendSignedRequest(baseUrl, REDEEM_PRODUCT, parameters, HttpMethod.POST, showLimitUsage);
     }
 
-    private final String PRODUCT_POSTION = "/sapi/v1/lending/daily/token/position";
+    private final String PRODUCT_POSITION = "/sapi/v1/lending/daily/token/position";
     /**
      * GET /sapi/v1/lending/daily/token/position
      * <br>
@@ -145,7 +145,7 @@ public class Savings {
      */
     public String flexibleProductPosition(LinkedHashMap<String,Object> parameters) {
         ParameterChecker.checkParameter(parameters, "asset", String.class);
-        return requestHandler.sendSignedRequest(baseUrl, PRODUCT_POSTION, parameters, HttpMethod.GET, showLimitUsage);
+        return requestHandler.sendSignedRequest(baseUrl, PRODUCT_POSITION, parameters, HttpMethod.GET, showLimitUsage);
     }
 
     private final String ACTIVITY_PROJECT = "/sapi/v1/lending/project/list";
@@ -210,7 +210,7 @@ public class Savings {
      * @see <a href="https://binance-docs.github.io/apidocs/spot/en/#get-fixed-activity-project-position-user_data">
      *     https://binance-docs.github.io/apidocs/spot/en/#get-fixed-activity-project-position-user_data</a>
      */
-    public String projectPostion(LinkedHashMap<String,Object> parameters) {
+    public String projectPosition(LinkedHashMap<String,Object> parameters) {
         ParameterChecker.checkParameter(parameters, "asset", String.class);
         return requestHandler.sendSignedRequest(baseUrl, PROJECT_POSITION, parameters, HttpMethod.GET, showLimitUsage);
     }
