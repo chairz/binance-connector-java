@@ -7,7 +7,7 @@ This is a lightweight library that works as a connector to the [Binance public A
 - Supported APIs:
   - `/api/*`
   - `/sapi/*`
-  - Spot Websocket Market Stream
+  - Spot Websocket Market Streams
   - Spot User Data Stream
 - Test cases and examples
 
